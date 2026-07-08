@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Wand2, UserPlus, Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import API_BASE_URL from '../config';
 
 function Signup() {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ function Signup() {
     setErrorMsg('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/register', {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/register`, {
         name: name.trim(),
         email: email.trim(),
         password,

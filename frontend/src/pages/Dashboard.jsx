@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Wand2, Shield, Sparkles, BookOpen } from 'lucide-react';
 import Navbar from '../components/Navbar';
+import API_BASE_URL from '../config';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function Dashboard() {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/user/profile', {
+        const response = await axios.get(`${API_BASE_URL}/api/user/profile`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
