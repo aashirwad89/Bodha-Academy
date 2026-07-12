@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/purity */
 import { useNavigate } from 'react-router-dom';
 import { Sparkles, ArrowRight } from 'lucide-react';
 

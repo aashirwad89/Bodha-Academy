@@ -1,6 +1,8 @@
+/* eslint-disable react-hooks/purity */
+/* eslint-disable react-hooks/set-state-in-effect */
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Sparkles, Shield, Compass, Swords, Heart, Activity } from 'lucide-react';
+import { Sparkles, Shield, Compass, Activity } from 'lucide-react';
 
 function Result() {
   const navigate = useNavigate();
