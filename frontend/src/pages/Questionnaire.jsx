@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, ArrowRight, Sparkles, Wand2 } from 'lucide-react';
+import API_BASE_URL from '../config';
 
 function Questionnaire() {
   const navigate = useNavigate();
@@ -95,7 +96,7 @@ function Questionnaire() {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/user/questionnaire',
+        `${API_BASE_URL}/api/user/questionnaire`,
         {
           name: name.trim(),
           age: parseInt(age, 10),
